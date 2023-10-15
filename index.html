@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/bdd7288c85.js" crossorigin="anonymous"></script>
+    <title>Grid</title>
+</head>
+<body>
+
+    <div class="container">   
+        <div class="signin"> 
+            <h1>Welcome back!</h1><br>
+                    <h2>Sign in</h2><br>
+                    <form action="https://httpbin.org/anything" method="post">
+                        <label for="username"><i class="fa-solid fa-user"></i>Username:</label>
+                        <input id="username" name="username" type="text" required><br>
+                        
+                        <label for="password">Password:</label>
+                        <input id="password" name="password" type="password" required><br>
+                    
+                        <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+        </div>
+
+        <div class="forgetpassword">
+            <h2>Forget yours password?</h2><br>
+            <form action="https://httpbin.org/anything" method="post">
+                <label for="email"><i class="fa-solid fa-envelope"></i>Email:</label>
+                <input id="email" name="email" type="email" required>
+                <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+   
+
+        <div class="signup">
+            <h1>Don't have any account?</h1><br>
+                <h2>Sign up</h2><br>
+                <h3>Enter valid details to create account.</h3><br>
+                <form action="https://httpbin.org/anything" method="post">
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="name"><i class="fa-solid fa-user"></i> Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lastName">Lastname</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="number"><i class="fa-solid fa-phone"></i> Phone No.</label>
+                            <input type="text" id="number" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email"><i class="fa-solid fa-envelope"></i> Your Email.</label>
+                        <input type="text" id="email" required>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="password">Password: </label>
+                            <input type="password" name="password" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="confirmPassword">Confirm Password: </label>
+                            <input type="password" name="confirmPassword" required>
+                        </div>
+                    </div>
+
+                    <div class="gender">
+                        <h2>Gender</h2>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                    </div>
+
+                    <div class="interacts">
+                        <div class="input-group">
+                            <h2>What is your interest?</h2>
+                            <input type="checkbox" id="programming" name="interests" value="programming">
+                            <label for="programming">Programmering</label>
+                            
+                            <input type="checkbox" id="gaming" name="interests" value="gaming">
+                            <label for="gaming">Game</label>
+                            
+                            <input type="checkbox" id="reading" name="interests" value="reading">
+                            <label for="reading">Reading</label>
+                            
+                            <input type="checkbox" id="drawing" name="interests" value="drawing">
+                            <label for="drawing">Drawing</label><br>
+                           
+                            <input type="checkbox" id="training" name="interacts" value="training">
+                            <label for="training">Training</label>
+                            
+                            <input type="checkbox" id="dancing" name="interacts" value="dancing">
+                            <label for="dancing">Dancing</label>
+
+                            <input type="checkbox" id="other" name="interacts" value="other">
+                            <label for="dancing">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <label for="message"><i class="fa-solid fa-comment"></i> Your message</label><br>
+                        <textarea typ="message" rows="10"></textarea>
+                    </div><br>
+                    <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+                
+                </form>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>

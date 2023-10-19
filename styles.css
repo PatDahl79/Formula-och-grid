@@ -7,95 +7,124 @@
     color: hsl(258, 97%, 24%);
 }
 body{
-    align-items: center;
     margin-left: 50px;
     margin-right: 50px;
     text-align: left;
     margin-top: 100px;
     background: radial-gradient(#fff, hsl(209, 51%, 83%));
 }
-.container{
-    justify-items: space-between;
-    margin-top: 150px;
-    margin-left: 10%;
-    margin-bottom: 150px;
-    margin-right: 10%;
-    font-weight: 600;
-    text-transform: uppercase;
+h1{
+    font-size: 35px;
+    margin-top: 15px;
+}
+h2{
     font-size: 20px;
-    text-decoration: center;
+    margin-top: 15px;
+}
+h3{
+    font-size: 18px;
+    margin-top: 15px;
+}
+.container{
+    width: 100%;
     display: grid;
+    grid-template-areas: 
+    "signIn signUp"
+    ". signUp"
+    "forgetPassword signUp"
+    ". signUp";
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "signin signup"
-    "forgetpassword signup";
-    gap: 100px;
+    grid-column: 50%;
+    gap: 50px;
+    padding: 30px 30px;
+    text-transform: uppercase;
 }
 .container button{
+    width: 100%;
     font-size: 15px;
     text-decoration: none;
     border: 1px solid hsl(258, 56%, 87%);
-    padding: 10px 100px;
+    padding: 20px 100px;
     background-color: #bcd7fc;
-    position: relative;
     cursor: pointer;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 .container button:hover{
     border-color: 1px solid hsl(258, 64%, 81%);
     background: hsl(258, 64%, 81%);
     transition: 0.5s;
 }
-
-h1{
-    font-size: 35px;
-}
-h2{
-    font-size: 25px;
-}
-h3{
-    font-size: 20px;
+i{
+    margin-right: 5px;
+    color: rgb(37, 88, 219);
 }
 
-.signin{
-    padding: 10px 50px;
-    grid-column: 1/2;
-    grid-area: signin;
-}
-.signin input{
-    margin: 10px 20px;
-    display: inline-block;
-    padding: 10px 100px;
-    text-align: left;
-    width: 90%;
-}
-
-.forgetpassword{
-    grid-column: 1/2;
-    grid-area: forgetpassword;
-    padding: 10px 50px;
-}
-.forgetpassword input{
-    margin: 20px 10px;
-    display: inline-block;
-    padding: 10px 100px;
-    text-align: left;
-    width: 90%;
-}
-.signup{
-    grid-column: 2/3;
-    grid-area: signup;
-    padding: 10px 50px;
+.signIn{
     width: 100%;
+    grid-area: signIn;
+    border-radius: 10px;
+    padding: 15px;
 }
-.signup input{
-    margin: 20px 10px;
-    display: inline-block;
+.signIn:hover {
+    border: 1px solid hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 2);
+    transition: 0.5s;
+}
+.signIn input {
+    margin: 10px 20px;
     padding: 10px 50px;
     text-align: left;
+    width: 250px;
 }
-.signup label{
-    font-size: 18px;
+.signIn [type="password"] {
+    padding: 10px 25px;
+    font-size: 15px;
+    width: 70%;
+}
+.signIn [type="text"] {
+    padding: 10px 25px;
+    width: 65%;
+}
+
+.forgetPassword{
+    grid-area: forgetPassword;
+    border-radius: 10px;
+    padding: 15px;
+}
+.forgetPassword:hover {
+    border: 1px solid hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 2);
+    transition: 0.5s;
+}
+.forgetPassword input{
+    margin:  10px;
+    text-align: left;
+    width: 90%;
+}
+.forgetPassword [type="email"]{
+    padding: 10px 25px;
+    font-size: 15px;
+    width: 98%;
+}
+
+.signUp {
+    grid-area: signUp;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+}
+.signUp:hover {
+    border: 1px solid hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 2);
+    transition: 0.5s;
+}
+.signUp input {
+    margin: 10px;
+    padding: 10px 50px;
+}
+.signUp label {
+    margin-top: 15px;
 }
 
 .interacts, 
@@ -105,6 +134,7 @@ h3{
 }
 .message textarea{
     width: 100%;
+    padding: 10px 20px;
 }
 
 .row{
@@ -112,27 +142,57 @@ h3{
     align-items: center;
     justify-content: space-between;
 }
-.row .input-group{
-    flex-basis: 50%;
+.input-group [type="text"] {
+    margin: 10px;
+    padding: 10px 20px;
 }
+.input-group [type="password"] {
+    margin: 10px;
+    padding: 10px 20px;
+}
+/* Din befintliga CSS-kod här */
 
-i{
-    margin-right: 5px;
-    color: rgb(37, 88, 219);
-}
-.input-group [type="text"], [typ="message"], [type="password"]{
-    padding: 10px 25px;
-    font-size: 15px;
-    width: 90%;
-}
-.signin [type="text"], [type="password"]{
-    padding: 10px 25px;
-    font-size: 15px;
-    width: 90%;
-}
-.forgetpassword [type="email"]{
-    padding: 10px 25px;
-    font-size: 15px;
-    width: 90%;
-}
+@media (max-width: 700px) {
+    body {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .container {
+      display: block;
+      padding: 20px;
+    }
+  
+    .container button {
+      padding: 15px 70px;
+      margin-top: 15px;
+    }
+    .forgetPassword, .signUp {
+        margin-top: 70px;
+    }
 
+    .signIn input,
+    .forgetPassword input,
+    .signUp input,
+    .message textarea,
+    .input-group [type="text"],
+    .input-group [type="password"] {
+      width: 100%;
+      padding: 10px 15px;
+      margin: 5px 0;
+    }
+  
+    h1 {
+      font-size: 25px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    h3 {
+      font-size: 16px;
+    }
+  }
+  
+  
